@@ -65,11 +65,17 @@ src/
 backend/               # Python sidecar for LangGraph orchestrator
 
 ## 8. Mandatory Skills Usage
-Agents MUST install and use the following skills during development:
+Agents MUST consult and use the following skills when working in their respective domains:
 1. **`svelte-code-writer`**: Run `npx @sveltejs/mcp svelte-autofixer` on every `.svelte` file before finalizing.
-2. **`design-taste-frontend`**: Consult Pre-Flight Check (Section 14) before delivering sections.
+2. **`design-taste-frontend`**: Consult Pre-Flight Check before delivering frontend sections.
+3. **`drizzle-orm`**: Consult when writing or updating SQLite schemas and queries.
+4. **`playwright-cli` & `playwright-best-practices`**: Consult when developing the `validate_ui.py` script or any E2E tests.
+5. **`tauri-v2`**: Consult when updating `tauri.conf.json`, rust code, or desktop capabilities.
+6. **`shadcn-svelte`**: Consult when scaffolding or customizing UI components.
+7. **`fastapi`**: Consult when developing the Python LangGraph sidecar backend.
+8. **`find-skills`**: Use `npx skills find <query>` to discover new capabilities if stuck on unfamiliar domains.
 
-*(Installation for new agents: `npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend` and `npx skills add https://github.com/sveltejs/ai-tools --skill svelte-code-writer`)*
+*(Installation for new agents: Install missing skills via `npx skills add <owner/repo@skill>` prior to starting development)*
 
 ## 9. Phase Verification
 Confirm foundations exist before building sections. Check `WORKFLOW.md` for explicit completion criteria per phase.
